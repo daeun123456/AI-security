@@ -1,0 +1,16 @@
+experimentName: nni_example
+searchSpaceFile: search_space.json
+trialCommand: python model.py
+trialConcurrency: 1
+#trialGpuNumber: 1
+maxExperimentDuration: 2h
+maxTrialNumber: 15
+tuner:
+  name: TPE
+  classArgs:
+    optimize_mode: maximize
+trainingService:
+  platform: local
+  #useActiveGpu: True
+  #maxTrialNumberPerGpu: 15
+  #gpuIndices: 0
